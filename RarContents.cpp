@@ -23,5 +23,10 @@ struct FILE_HEAD{
 };
 
 int main(){
+    ifstream file("Example.rar",ios::binary);
+    if (!file){
+        cout << "Файл не открыт";
+    }
+    cout << "Файл успешно открылся" << "\n";
     return 0;
 }
