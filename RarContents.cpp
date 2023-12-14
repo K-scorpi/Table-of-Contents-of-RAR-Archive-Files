@@ -36,8 +36,7 @@ int main(){
     file.close();
     int bytes=0;
     int k=0;
-    while (bytes<=length)
-    {
+    while (bytes<=length){
         Archive OurRar={};
         OurRar.header_crc[0]=buff[bytes];
         OurRar.header_crc[1]=buff[bytes+1];
@@ -63,14 +62,11 @@ int main(){
             cout << "\n";
             bytes=bytes+razmer+size_of_packaged_data;
             k+=1;
-            //break;
         }
-        else
-        {
+        else{
             bytes=bytes+razmer;
         }
-        if (k==3)
-        {
+        if (k==3){ // КОЛИЧЕСТВО ФАЙЛОВ В АРХИВЕ
             break;
         }
     }
